@@ -4,6 +4,7 @@ import com.assignment07.Classes.*;
 
 public class Main {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		ViewClass vc = new ViewClass();
+		vc.setVisible(true);
 	}
 }
