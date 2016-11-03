@@ -3,16 +3,17 @@ package com.assignment07.Classes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Color;
-import java.awt.TextField;
 import javax.swing.JTextField;
 
 public class ViewClass extends JFrame implements ActionListener{
 
+	
+	private static final long serialVersionUID = 1L;
+	
 	public JButton additionButton = new JButton();
 	public JButton subtractionButton = new JButton();
 	public JButton multiplicationButton = new JButton();
@@ -39,7 +40,6 @@ public class ViewClass extends JFrame implements ActionListener{
 
 	private double input1 = 0.0;
 	private double input2 = 0.0;
-	private double result = 0.0;
 
 	public double getInput1() {
 		return input1;
