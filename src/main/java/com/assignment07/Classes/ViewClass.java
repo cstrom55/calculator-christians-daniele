@@ -115,7 +115,7 @@ public class ViewClass extends JFrame implements ActionListener{
 		absoluteButton.setBounds(230, 25, 210, 50);
 		getContentPane().add(absoluteButton);
 	}
-	public void createLabels(){
+	private void createLabels(){
 		resultWindow.setBackground(Color.WHITE);
 		resultWindow.setForeground(Color.BLACK);
 		resultWindow.setBounds(755, 179, 193, 36);
