@@ -1,5 +1,8 @@
 package com.assignment07.Interfaces;
-
+/**
+ * 	@author Christian Ström, Daniel Eriksson
+ *	Interface for advanced operations
+ */
 public interface CalculatorAdvancedOperationsInterface {
 	public double power(double var1, double var2);
 	public double squareroot(double var1);
