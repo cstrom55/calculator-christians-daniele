@@ -177,8 +177,8 @@ public class ViewClass extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		try{
 			if (e.getSource() == exitButton){
-				
-				System.exit(0);
+				dispose();
+				//System.exit(0);
 			}
 			if (e.getSource() == clearButton){
 				input1Window.setText("");
