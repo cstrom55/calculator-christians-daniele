@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="13" passed="13">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="49769" started-at="2016-11-04T13:46:00Z" finished-at="2016-11-04T13:46:50Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="49769" started-at="2016-11-04T13:46:00Z" finished-at="2016-11-04T13:46:50Z">
+      <class name="com.assignment07.Test.ViewClassTest">
+        <test-method status="PASS" signature="gettersAndSettersTest()[pri:0, instance:gettersAndSettersTest(com.assignment07.Test.ViewClassTest)]" name="gettersAndSettersTest" duration-ms="1" started-at="2016-11-04T14:46:01Z" finished-at="2016-11-04T14:46:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gettersAndSettersTest -->
+        <test-method status="PASS" signature="actionPerformedTest()[pri:0, instance:actionPerformedTest(com.assignment07.Test.ViewClassTest)]" name="actionPerformedTest" duration-ms="47939" started-at="2016-11-04T14:46:01Z" finished-at="2016-11-04T14:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- actionPerformedTest -->
+      </class> <!-- com.assignment07.Test.ViewClassTest -->
+      <class name="com.assignment07.Test.AdvancedOperationsTest">
+        <test-method status="PASS" signature="absoluteTest()[pri:0, instance:absoluteTest(com.assignment07.Test.AdvancedOperationsTest)]" name="absoluteTest" duration-ms="7" started-at="2016-11-04T14:46:00Z" finished-at="2016-11-04T14:46:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- absoluteTest -->
+        <test-method status="PASS" signature="cubedTest()[pri:0, instance:cubedTest(com.assignment07.Test.AdvancedOperationsTest)]" name="cubedTest" duration-ms="0" started-at="2016-11-04T14:46:00Z" finished-at="2016-11-04T14:46:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cubedTest -->
+        <test-method status="PASS" signature="powerOfTest()[pri:0, instance:powerOfTest(com.assignment07.Test.AdvancedOperationsTest)]" name="powerOfTest" duration-ms="1" started-at="2016-11-04T14:46:00Z" finished-at="2016-11-04T14:46:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- powerOfTest -->
+        <test-method status="PASS" signature="squareRootTest()[pri:0, instance:squareRootTest(com.assignment07.Test.AdvancedOperationsTest)]" name="squareRootTest" duration-ms="0" started-at="2016-11-04T14:46:00Z" finished-at="2016-11-04T14:46:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- squareRootTest -->
+        <test-method status="PASS" signature="logTest()[pri:0, instance:logTest(com.assignment07.Test.AdvancedOperationsTest)]" name="logTest" duration-ms="0" started-at="2016-11-04T14:46:00Z" finished-at="2016-11-04T14:46:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTest -->
+        <test-method status="PASS" signature="squaredTest()[pri:0, instance:squaredTest(com.assignment07.Test.AdvancedOperationsTest)]" name="squaredTest" duration-ms="0" started-at="2016-11-04T14:46:00Z" finished-at="2016-11-04T14:46:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- squaredTest -->
+      </class> <!-- com.assignment07.Test.AdvancedOperationsTest -->
+      <class name="com.assignment07.Test.BasicOperationsTest">
+        <test-method status="PASS" signature="divideTest()[pri:0, instance:divideTest(com.assignment07.Test.BasicOperationsTest)]" name="divideTest" duration-ms="1" started-at="2016-11-04T14:46:49Z" finished-at="2016-11-04T14:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- divideTest -->
+        <test-method status="PASS" signature="addTest()[pri:0, instance:addTest(com.assignment07.Test.BasicOperationsTest)]" name="addTest" duration-ms="1" started-at="2016-11-04T14:46:49Z" finished-at="2016-11-04T14:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTest -->
+        <test-method status="PASS" signature="multiplyTest()[pri:0, instance:multiplyTest(com.assignment07.Test.BasicOperationsTest)]" name="multiplyTest" duration-ms="0" started-at="2016-11-04T14:46:49Z" finished-at="2016-11-04T14:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- multiplyTest -->
+        <test-method status="PASS" signature="subtractTest()[pri:0, instance:subtractTest(com.assignment07.Test.BasicOperationsTest)]" name="subtractTest" duration-ms="0" started-at="2016-11-04T14:46:49Z" finished-at="2016-11-04T14:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subtractTest -->
+      </class> <!-- com.assignment07.Test.BasicOperationsTest -->
+      <class name="com.assignment07.Test.MainTest">
+        <test-method status="PASS" signature="mainTest()[pri:0, instance:mainTest(com.assignment07.Test.MainTest)]" name="mainTest" duration-ms="871" started-at="2016-11-04T14:46:49Z" finished-at="2016-11-04T14:46:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mainTest -->
+      </class> <!-- com.assignment07.Test.MainTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

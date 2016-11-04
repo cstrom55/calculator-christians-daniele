@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ViewClass.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculator-christians-daniele</a> &gt; <a href="index.source.html" class="el_package">com.assignment07.Classes</a> &gt; <span class="el_source">ViewClass.java</span></div><h1>ViewClass.java</h1><pre class="source lang-java linenums">package com.assignment07.Classes;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Color;
+import javax.swing.JTextField;
+
+public class ViewClass extends JFrame implements ActionListener{
+
+	
+	private static final long serialVersionUID = 1L;
+	
+<span class="fc" id="L15">	public JButton additionButton = new JButton();</span>
+<span class="fc" id="L16">	public JButton subtractionButton = new JButton();</span>
+<span class="fc" id="L17">	public JButton multiplicationButton = new JButton();</span>
+<span class="fc" id="L18">	public JButton divisionButton = new JButton();</span>
+<span class="fc" id="L19">	public JButton powButton = new JButton();</span>
+<span class="fc" id="L20">	public JButton sqrtButton = new JButton();</span>
+<span class="fc" id="L21">	public JButton squareButton = new JButton();</span>
+<span class="fc" id="L22">	public JButton cubeButton = new JButton();</span>
+<span class="fc" id="L23">	public JButton logButton = new JButton();</span>
+<span class="fc" id="L24">	public JButton absoluteButton = new JButton();</span>
+<span class="fc" id="L25">	public JButton exitButton = new JButton();</span>
+<span class="fc" id="L26">	public JButton clearButton = new JButton();</span>
+
+<span class="fc" id="L28">	public JTextField resultWindow = new JTextField();</span>
+<span class="fc" id="L29">	public JTextField input1Window = new JTextField();</span>
+<span class="fc" id="L30">	public JTextField input2Window = new JTextField();</span>
+
+<span class="fc" id="L32">	public JLabel input1WindowText = new JLabel();</span>
+<span class="fc" id="L33">	public JLabel input2WindowText = new JLabel();</span>
+<span class="fc" id="L34">	public JLabel resultWindowText = new JLabel();</span>
+
+<span class="fc" id="L36">	CalculatorAdvancedOperations CAO = new CalculatorAdvancedOperations();</span>
+<span class="fc" id="L37">	CalculatorBasicOperations CBO = new CalculatorBasicOperations();</span>
+
+<span class="fc" id="L39">	private double input1 = 0.0;</span>
+<span class="fc" id="L40">	private double input2 = 0.0;</span>
+
+	public double getInput1() {
+<span class="fc" id="L43">		return input1;</span>
+	}
+
+	public void setInput1(double input1) {
+<span class="fc" id="L47">		this.input1 = input1;</span>
+<span class="fc" id="L48">	}</span>
+
+	public double getInput2() {
+<span class="fc" id="L51">		return input2;</span>
+	}
+
+	public void setInput2(double input2) {
+<span class="fc" id="L55">		this.input2 = input2;</span>
+<span class="fc" id="L56">	}</span>
+
+<span class="fc" id="L58">	public ViewClass(){</span>
+<span class="fc" id="L59">		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L60">		createUI();</span>
+<span class="fc" id="L61">		addActionListeners();</span>
+
+<span class="fc" id="L63">	}</span>
+
+	private void createButtons(){
+
+<span class="fc" id="L67">		exitButton.setText(&quot;Exit&quot;);</span>
+<span class="fc" id="L68">		exitButton.setBounds(10, 190, 210, 50);</span>
+<span class="fc" id="L69">		getContentPane().add(exitButton);</span>
+
+<span class="fc" id="L71">		clearButton.setText(&quot;Clear input&quot;);</span>
+<span class="fc" id="L72">		clearButton.setBounds(755, 25, 210, 23);</span>
+<span class="fc" id="L73">		getContentPane().add(clearButton);</span>
+
+<span class="fc" id="L75">		additionButton.setText(&quot;+&quot;);</span>
+<span class="fc" id="L76">		additionButton.setBounds(450, 25, 100, 50);</span>
+<span class="fc" id="L77">		getContentPane().add(additionButton);</span>
+
+<span class="fc" id="L79">		subtractionButton.setText(&quot;-&quot;);</span>
+<span class="fc" id="L80">		subtractionButton.setBounds(450, 80, 100, 50);</span>
+<span class="fc" id="L81">		getContentPane().add(subtractionButton);</span>
+
+<span class="fc" id="L83">		multiplicationButton.setText(&quot;*&quot;);</span>
+<span class="fc" id="L84">		multiplicationButton.setBounds(450, 135, 100, 50);</span>
+<span class="fc" id="L85">		getContentPane().add(multiplicationButton);</span>
+
+<span class="fc" id="L87">		divisionButton.setText(&quot;/&quot;);</span>
+<span class="fc" id="L88">		divisionButton.setBounds(450, 190, 100, 50);</span>
+<span class="fc" id="L89">		getContentPane().add(divisionButton);</span>
+
+<span class="fc" id="L91">		powButton.setText(&quot;&lt;html&gt;&lt;center&gt;X&lt;sup&gt;Y&lt;/sup&gt;&lt;/center&gt;&lt;/html&gt;&quot;); </span>
+<span class="fc" id="L92">		powButton.setBounds(10, 80, 210, 50);</span>
+<span class="fc" id="L93">		getContentPane().add(powButton);</span>
+
+<span class="fc" id="L95">		sqrtButton.setText(&quot;&lt;html&gt;&lt;center&gt;\u221A x&lt;/center&gt;&lt;/html&gt;&quot;); //todo</span>
+<span class="fc" id="L96">		sqrtButton.setBounds(10, 25, 210, 50);</span>
+<span class="fc" id="L97">		getContentPane().add(sqrtButton);</span>
+
+
+<span class="fc" id="L100">		squareButton.setText(&quot;&lt;html&gt;&lt;center&gt;X&lt;sup&gt;2&lt;/sup&gt;&lt;/center&gt;&lt;/html&gt;&quot;); </span>
+<span class="fc" id="L101">		squareButton.setBounds(10, 135, 210, 50);</span>
+<span class="fc" id="L102">		getContentPane().add(squareButton);</span>
+
+<span class="fc" id="L104">		cubeButton.setText(&quot;&lt;html&gt;&lt;center&gt;X&lt;sup&gt;3&lt;/sup&gt;&lt;/center&gt;&lt;/html&gt;&quot;);</span>
+<span class="fc" id="L105">		cubeButton.setBounds(230, 80, 210, 50);</span>
+<span class="fc" id="L106">		getContentPane().add(cubeButton);</span>
+
+<span class="fc" id="L108">		logButton.setText(&quot;LOG&quot;);</span>
+<span class="fc" id="L109">		logButton.setBounds(230, 135, 210, 50);</span>
+<span class="fc" id="L110">		getContentPane().add(logButton);</span>
+
+<span class="fc" id="L112">		absoluteButton.setText(&quot;Absolute&quot;); </span>
+<span class="fc" id="L113">		absoluteButton.setBounds(230, 25, 210, 50);</span>
+<span class="fc" id="L114">		getContentPane().add(absoluteButton);</span>
+<span class="fc" id="L115">	}</span>
+	private void createLabels(){
+<span class="fc" id="L117">		resultWindow.setBackground(Color.WHITE);</span>
+<span class="fc" id="L118">		resultWindow.setForeground(Color.BLACK);</span>
+<span class="fc" id="L119">		resultWindow.setBounds(755, 179, 193, 36);</span>
+<span class="fc" id="L120">		resultWindow.setText(&quot;&quot;);</span>
+<span class="fc" id="L121">		getContentPane().add(resultWindow);</span>
+
+<span class="fc" id="L123">		input1Window.setEditable(true);</span>
+<span class="fc" id="L124">		input1Window.setBackground(Color.WHITE);</span>
+<span class="fc" id="L125">		input1Window.setForeground(Color.BLACK);</span>
+<span class="fc" id="L126">		input1Window.setBounds(735, 55, 240, 36);</span>
+<span class="fc" id="L127">		input1Window.setText(&quot;&quot;);</span>
+<span class="fc" id="L128">		getContentPane().add(input1Window);</span>
+
+<span class="fc" id="L130">		input2Window.setEditable(true);</span>
+<span class="fc" id="L131">		input2Window.setBackground(Color.WHITE);</span>
+<span class="fc" id="L132">		input2Window.setForeground(Color.BLACK);</span>
+<span class="fc" id="L133">		input2Window.setBounds(734, 100, 240, 36);</span>
+<span class="fc" id="L134">		input2Window.setText(&quot;&quot;);</span>
+<span class="fc" id="L135">		getContentPane().add(input2Window);</span>
+
+<span class="fc" id="L137">		resultWindowText.setBounds(560, 85, 240, 65);</span>
+<span class="fc" id="L138">		resultWindowText.setText(&quot;Enter your second value here:&quot;);</span>
+<span class="fc" id="L139">		getContentPane().add(resultWindowText);</span>
+
+<span class="fc" id="L141">		input1WindowText.setBounds(560, 55, 240, 36);</span>
+<span class="fc" id="L142">		input1WindowText.setText(&quot;Enter your first value here:&quot;);</span>
+<span class="fc" id="L143">		getContentPane().add(input1WindowText);</span>
+
+<span class="fc" id="L145">		input2WindowText.setBounds(706, 165, 39, 65);</span>
+<span class="fc" id="L146">		input2WindowText.setText(&quot;Result:&quot;);</span>
+<span class="fc" id="L147">		getContentPane().add(input2WindowText);</span>
+
+
+<span class="fc" id="L150">	}</span>
+
+
+	private void addActionListeners(){
+<span class="fc" id="L154">		additionButton.addActionListener(this);</span>
+<span class="fc" id="L155">		subtractionButton.addActionListener(this);</span>
+<span class="fc" id="L156">		multiplicationButton.addActionListener(this);</span>
+<span class="fc" id="L157">		divisionButton.addActionListener(this);</span>
+<span class="fc" id="L158">		powButton.addActionListener(this);</span>
+<span class="fc" id="L159">		sqrtButton.addActionListener(this);</span>
+<span class="fc" id="L160">		squareButton.addActionListener(this);</span>
+<span class="fc" id="L161">		cubeButton.addActionListener(this);</span>
+<span class="fc" id="L162">		logButton.addActionListener(this);</span>
+<span class="fc" id="L163">		absoluteButton.addActionListener(this);</span>
+<span class="fc" id="L164">		exitButton.addActionListener(this);</span>
+<span class="fc" id="L165">		clearButton.addActionListener(this);</span>
+<span class="fc" id="L166">	}</span>
+
+	private void createUI(){
+<span class="fc" id="L169">		setTitle(&quot;Teamwork makes the dream work!&quot;);</span>
+<span class="fc" id="L170">		setSize(1000, 300);</span>
+<span class="fc" id="L171">		getContentPane().setLayout(null);</span>
+<span class="fc" id="L172">		createButtons();</span>
+<span class="fc" id="L173">		createLabels();</span>
+<span class="fc" id="L174">	}</span>
+	
+
+	public void actionPerformed(ActionEvent e) {
+		try{
+<span class="fc bfc" id="L179" title="All 2 branches covered.">			if (e.getSource() == exitButton){</span>
+<span class="fc" id="L180">				dispose();</span>
+				//System.exit(0);
+			}
+<span class="fc bfc" id="L183" title="All 2 branches covered.">			if (e.getSource() == clearButton){</span>
+<span class="fc" id="L184">				input1Window.setText(&quot;&quot;);</span>
+<span class="fc" id="L185">				input2Window.setText(&quot;&quot;);</span>
+
+			}
+<span class="fc bfc" id="L188" title="All 2 branches covered.">			if (e.getSource() == additionButton){</span>
+<span class="fc" id="L189">				setInput1(Double.parseDouble(input1Window.getText()));</span>
+<span class="fc" id="L190">				setInput2(Double.parseDouble(input2Window.getText()));</span>
+<span class="fc" id="L191">				resultWindow.setText(Double.toString((CBO.add(getInput1(), getInput2()))));</span>
+			}
+<span class="fc bfc" id="L193" title="All 2 branches covered.">			if (e.getSource() == subtractionButton){</span>
+<span class="fc" id="L194">				setInput1(Double.parseDouble(input1Window.getText()));</span>
+<span class="fc" id="L195">				setInput2(Double.parseDouble(input2Window.getText()));</span>
+<span class="fc" id="L196">				resultWindow.setText(Double.toString((CBO.subtract(getInput1(), getInput2()))));</span>
+			}
+<span class="fc bfc" id="L198" title="All 2 branches covered.">			if (e.getSource() == multiplicationButton){</span>
+<span class="fc" id="L199">				setInput1(Double.parseDouble(input1Window.getText()));</span>
+<span class="fc" id="L200">				setInput2(Double.parseDouble(input2Window.getText()));</span>
+<span class="fc" id="L201">				resultWindow.setText(Double.toString((CBO.multiply(getInput1(), getInput2()))));</span>
+			}
+<span class="fc bfc" id="L203" title="All 2 branches covered.">			if (e.getSource() == divisionButton){</span>
+<span class="fc" id="L204">				setInput1(Double.parseDouble(input1Window.getText()));</span>
+<span class="fc" id="L205">				setInput2(Double.parseDouble(input2Window.getText()));</span>
+<span class="fc" id="L206">				resultWindow.setText(Double.toString((CBO.divide(getInput1(), getInput2()))));</span>
+				
+			}
+<span class="fc bfc" id="L209" title="All 2 branches covered.">			if (e.getSource() == powButton){</span>
+<span class="fc" id="L210">				setInput1(Double.parseDouble(input1Window.getText()));</span>
+<span class="fc" id="L211">				setInput2(Double.parseDouble(input2Window.getText()));</span>
+<span class="fc" id="L212">				resultWindow.setText(Double.toString((CAO.power(getInput1(), getInput2()))));</span>
+
+			}
+<span class="fc bfc" id="L215" title="All 2 branches covered.">			if (e.getSource() == sqrtButton){</span>
+<span class="fc" id="L216">				setInput1(Double.parseDouble(input1Window.getText()));</span>
+<span class="fc" id="L217">				resultWindow.setText(Double.toString((CAO.squareroot(getInput1()))));</span>
+<span class="pc bpc" id="L218" title="1 of 2 branches missed.">				if(Double.toString(getInput2()) != &quot;&quot;){</span>
+<span class="fc" id="L219">					input2Window.setText(&quot;Only first input is used in Sqrt operation&quot;);</span>
+				}
+			}
+<span class="fc bfc" id="L222" title="All 2 branches covered.">			if (e.getSource() == squareButton){</span>
+<span class="fc" id="L223">				setInput1(Double.parseDouble(input1Window.getText()));</span>
+<span class="fc" id="L224">				resultWindow.setText(Double.toString((CAO.squared(getInput1()))));</span>
+<span class="pc bpc" id="L225" title="1 of 2 branches missed.">				if(Double.toString(getInput2()) != &quot;&quot;){</span>
+<span class="fc" id="L226">					input2Window.setText(&quot;Only first input is used in Square operation&quot;);</span>
+				}
+			}
+<span class="fc bfc" id="L229" title="All 2 branches covered.">			if (e.getSource() == cubeButton){</span>
+<span class="fc" id="L230">				setInput1(Double.parseDouble(input1Window.getText()));</span>
+<span class="fc" id="L231">				resultWindow.setText(Double.toString((CAO.cubed(getInput1()))));</span>
+<span class="pc bpc" id="L232" title="1 of 2 branches missed.">				if(Double.toString(getInput2()) != &quot;&quot;){</span>
+<span class="fc" id="L233">					input2Window.setText(&quot;Only first input is used in cube operation&quot;);</span>
+				}
+			}
+<span class="fc bfc" id="L236" title="All 2 branches covered.">			if (e.getSource() == logButton){</span>
+<span class="fc" id="L237">				setInput1(Double.parseDouble(input1Window.getText()));</span>
+<span class="fc" id="L238">				resultWindow.setText(Double.toString((CAO.log(getInput1()))));</span>
+<span class="pc bpc" id="L239" title="1 of 2 branches missed.">				if(Double.toString(getInput2()) != &quot;&quot;){</span>
+<span class="fc" id="L240">					input2Window.setText(&quot;Only first input is used in log operation&quot;);</span>
+				}
+			}
+<span class="fc bfc" id="L243" title="All 2 branches covered.">			if (e.getSource() == absoluteButton){</span>
+<span class="fc" id="L244">				setInput1(Double.parseDouble(input1Window.getText()));</span>
+<span class="fc" id="L245">				resultWindow.setText(Double.toString((CAO.absolute(getInput1()))));</span>
+<span class="pc bpc" id="L246" title="1 of 2 branches missed.">				if(Double.toString(getInput2()) != &quot;&quot;){</span>
+<span class="fc" id="L247">					input2Window.setText(&quot;Only first input is used in absolute operation&quot;);</span>
+				}
+			}
+		}
+<span class="fc" id="L251">		catch(NumberFormatException error){</span>
+			//System.out.println(error);
+<span class="fc" id="L253">			input2Window.setText(&quot;Please only use numbers in the calculator&quot;);</span>
+<span class="fc" id="L254">		}</span>
+<span class="fc" id="L255">	}</span>
+
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

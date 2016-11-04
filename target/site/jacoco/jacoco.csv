@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+calculator-christians-daniele,com.assignment07.Classes,ViewClass,0,847,5,29,0,170,5,22,0,10
+calculator-christians-daniele,com.assignment07.Classes,CalculatorBasicOperations,0,19,0,0,0,5,0,5,0,5
+calculator-christians-daniele,com.assignment07.Classes,CalculatorAdvancedOperations,0,26,0,0,0,7,0,7,0,7
+calculator-christians-daniele,com.assignment07.Main,Main,0,11,0,0,0,4,0,2,0,2
