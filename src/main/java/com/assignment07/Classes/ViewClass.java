@@ -6,12 +6,15 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Color;
 import javax.swing.JTextField;
-
+/**
+ *	@author Christian Ström, Daniel Eriksson
+ *	Methods for the GUI
+ */
 public class ViewClass extends JFrame implements ActionListener{
 
 	
 	private static final long serialVersionUID = 1L;
-	
+	//JButtons
 	public JButton additionButton = new JButton();
 	public JButton subtractionButton = new JButton();
 	public JButton multiplicationButton = new JButton();
@@ -24,44 +27,67 @@ public class ViewClass extends JFrame implements ActionListener{
 	public JButton absoluteButton = new JButton();
 	public JButton exitButton = new JButton();
 	public JButton clearButton = new JButton();
-
+	
+	//JTextFields
 	public JTextField resultWindow = new JTextField();
 	public JTextField input1Window = new JTextField();
 	public JTextField input2Window = new JTextField();
 
+	//JLabels
 	public JLabel input1WindowText = new JLabel();
 	public JLabel input2WindowText = new JLabel();
 	public JLabel resultWindowText = new JLabel();
-
+	
+	//creating 
 	CalculatorAdvancedOperations CAO = new CalculatorAdvancedOperations();
 	CalculatorBasicOperations CBO = new CalculatorBasicOperations();
 
+	//input1/2 used to store inputvalues from the two textfields
 	private double input1 = 0.0;
 	private double input2 = 0.0;
 
+	/**
+	 * getter input1
+	 * @return input1
+	 */
 	public double getInput1() {
 		return input1;
 	}
-
+	/**
+	 * setter input1
+	 * @param input1
+	 */
 	public void setInput1(double input1) {
 		this.input1 = input1;
 	}
-
+	/**
+	 * getter input2
+	 * @return input2
+	 */
 	public double getInput2() {
 		return input2;
 	}
-
+	/**
+	 * setter input2
+	 * @param input2
+	 */
 	public void setInput2(double input2) {
 		this.input2 = input2;
 	}
 
+	/**
+	 * Method for creating the GUI and adding action listeners aswell as setting the default close operation to EXIT_ON_CLOSE
+	 */
 	public ViewClass(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		createUI();
 		addActionListeners();
-
 	}
-
+	
+	
+	/**
+	 * createButtons configures the JButtons (sets position, text, adds them to the frame)
+	 */
 	private void createButtons(){
 
 		exitButton.setText("Exit");
@@ -92,7 +118,7 @@ public class ViewClass extends JFrame implements ActionListener{
 		powButton.setBounds(10, 80, 210, 50);
 		getContentPane().add(powButton);
 
-		sqrtButton.setText("<html><center>\u221A x</center></html>"); //todo
+		sqrtButton.setText("<html><center>\u221A x</center></html>"); 
 		sqrtButton.setBounds(10, 25, 210, 50);
 		getContentPane().add(sqrtButton);
 
@@ -113,6 +139,10 @@ public class ViewClass extends JFrame implements ActionListener{
 		absoluteButton.setBounds(230, 25, 210, 50);
 		getContentPane().add(absoluteButton);
 	}
+	
+	/**
+	 * createLabels configures the JLabels (position, text, color and adds them to the window)
+	 */
 	private void createLabels(){
 		resultWindow.setBackground(Color.WHITE);
 		resultWindow.setForeground(Color.BLACK);
@@ -145,11 +175,11 @@ public class ViewClass extends JFrame implements ActionListener{
 		input2WindowText.setBounds(706, 165, 39, 65);
 		input2WindowText.setText("Result:");
 		getContentPane().add(input2WindowText);
-
-
 	}
 
-
+	/**
+	 * addActionListeners adds actionlistenders to the JButtons
+	 */
 	private void addActionListeners(){
 		additionButton.addActionListener(this);
 		subtractionButton.addActionListener(this);
@@ -164,7 +194,10 @@ public class ViewClass extends JFrame implements ActionListener{
 		exitButton.addActionListener(this);
 		clearButton.addActionListener(this);
 	}
-
+	
+	/**
+	 * createUI sets the title of the window, the size of the window, the layout of the window(null), adds the buttons and the labels
+	 */
 	private void createUI(){
 		setTitle("Teamwork makes the dream work!");
 		setSize(1000, 300);
@@ -173,7 +206,9 @@ public class ViewClass extends JFrame implements ActionListener{
 		createLabels();
 	}
 	
-
+	/**
+	 * actionPerformed takes an action event and the source and checks where it came from, and does things depending on what action triggered the ActionEvent
+	 */
 	public void actionPerformed(ActionEvent e) {
 		try{
 			if (e.getSource() == exitButton){
